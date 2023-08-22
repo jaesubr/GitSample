@@ -1,11 +1,12 @@
 apiVersion: v1
 kind: Pod
 metadata:
-        name: my-nginx-pod
+  name: argocd-helloworld
+  labels:
+    name: argocd-helloworld
 spec:
-        containers:
-                - name: my-nginx-container
-                  image: nginx:latest
-                  ports:
-                         - containerPort: 80
-                           protocol: TCP
+  containers:
+  - name: argocd-helloworld
+    image: nginx
+    ports:
+      - containerPort: 80
